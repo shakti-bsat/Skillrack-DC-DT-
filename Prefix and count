@@ -1,0 +1,2 @@
+lst=[input().strip()[:3] for i in range(int(input()))]
+[print(i, lst.count(i)) for i in sorted(set(lst)]
