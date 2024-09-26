@@ -1,0 +1,27 @@
+#DT 25/9/24
+r,c=map(int,input().split())
+l=[list(input().split()) for _ in range(r)]
+r1,c1=map(int,input().split())
+r2,c2=map(int,input().split())
+r1-=1
+r2-=1
+c1-=1
+c2-=1
+result=''
+indi=1
+result+=''.join((l[r1][:c1+1])[::-1])
+for i in range(r1+1,r2):
+    indi+=1
+    if indi%2==0:
+        result+=''.join(l[i])
+    else:
+        result+=''.join((l[i])[::-1])
+if r1==r2 and c2<c1:
+    print(''.join((l[r1][c2:c1+1])[::-1])
+    exit()
+indi+=1
+if indi%2==0:
+    result+=''.join(l[r2][:c2+1])
+else:
+    result+=''.join((l[r2][c2:])[::-1])
+print(result)
