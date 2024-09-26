@@ -1,0 +1,6 @@
+_ = input()
+digits = list(map(int, input().split()))
+
+rep = set(filter(lambda x: digits.count(x) > 1, set(digits)))
+m = max(rep, key=lambda x: (digits.count(x), -digits[digits.index(x) + 1:].index(x)))
+print(m)
