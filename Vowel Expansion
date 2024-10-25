@@ -1,0 +1,6 @@
+d = {'a':1,'e':2,'i':3,'o':4,'u':5,'A':1,'E':2,'I':3,'O':4,'U':5}
+for i in input().strip():
+    if i in d:
+        print(i*(d[i]+1),end='')
+    else:
+        print(i,end='')
