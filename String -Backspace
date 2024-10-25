@@ -1,0 +1,12 @@
+lst = [input().strip() for _ in range(2)]
+lst1 = []
+for i in lst:
+    temp = []
+    for j in i:
+        if j == '#' and temp:
+            v = temp.pop()
+        else:
+            temp.append(j)
+    lst1.append(temp)
+
+print('YES' if lst1[0] == lst1[-1] else 'NO')
