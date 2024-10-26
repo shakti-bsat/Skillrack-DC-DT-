@@ -1,0 +1,7 @@
+import string
+s = list(string.ascii_lowercase)
+m, n, k = map(int, input().split())
+lst = []
+for i in range(k // 2):
+    lst.extend((s.pop(m - 1), s.pop(n - 1)))
+print(*lst, sep='')
