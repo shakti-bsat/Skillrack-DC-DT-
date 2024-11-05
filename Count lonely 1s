@@ -1,0 +1,19 @@
+r, c = map(int, input().split())
+
+rowIdx, colIdx, positions = set(), set(), []
+for i in range(r):
+    row = input().strip().split()
+    for j, x in enumerate(row):
+        if x == '0':
+            continue
+        if i not in rowIdx and j not in colIdx:
+            positions.append((i, j))
+        else:
+            for (x, y) in positions:
+                if x == i or y == j:
+                    positions.remove((x, y))
+        rowIdx.add(i)
+        colIdx.add(j)
+
+print(len(positions))
+
