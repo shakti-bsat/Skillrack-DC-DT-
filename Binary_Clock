@@ -1,0 +1,10 @@
+h,m,s = map(int,input().split(':'))
+h1 = '##'+bin(h//10)[2:].zfill(2)
+h2 = bin(h%10)[2:].zfill(4)
+m1 = '#'+bin(m//10)[2:].zfill(3)
+m2 = bin(m%10)[2:].zfill(4)
+s1 = '#'+bin(s//10)[2:].zfill(3)
+s2 = bin(s%10)[2:].zfill(4)
+print('HH:MM:SS')
+for i in range(4):
+    print(h1[i],h2[i],' ',m1[i],m2[i],' ',s1[i],s2[i],sep='')
