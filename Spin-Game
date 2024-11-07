@@ -1,0 +1,8 @@
+_ = input()
+spins = map(int, input().split())
+topIdx = int(input())
+
+wheel = list(range(100))
+for spin in spins:
+    topIdx = (topIdx - spin) % 100
+    print(wheel[topIdx], end=' ')
