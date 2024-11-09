@@ -1,0 +1,9 @@
+k = int(input())
+lis = [5]
+start = 14
+while len(lis) <= k:
+    s = sum(int(i) for i in str(start))
+    if s % 5 == 0:
+        lis.append(start)
+    start += 1
+print(lis[k-1])
