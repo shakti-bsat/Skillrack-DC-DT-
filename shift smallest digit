@@ -1,0 +1,11 @@
+n = int(input())
+lis = input().split()
+s = 0
+for i in lis:
+    a = list(i)
+    m = min(a)
+    idx = len(a) - a[::-1].index(m) - 1
+    a.append(a.pop(idx))
+    s += int(''.join(a))
+
+print(s)
