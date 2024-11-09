@@ -1,0 +1,20 @@
+n = int(input())
+amt = list(map(int,input().split()))
+cp =  sum(amt)
+sp = []
+for i in amt:
+    if i % 5 == 0:
+        sp.append(i)
+    else:
+        rem = i%5 
+        if rem < 3:
+            sp.append(i - rem)
+        else:
+            sp.append(5 + (i - rem))
+sp = sum(sp)
+if sp > cp:
+    print(f"Profit {sp-cp}")
+elif sp < cp:
+    print(f"Loss{cp-sp}")
+else:
+    print("No Profit No Loss")
