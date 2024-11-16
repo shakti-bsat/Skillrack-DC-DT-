@@ -1,0 +1,13 @@
+n, x, y = map(int, input().split())
+sNo = map(int, input().split())
+
+if n == y:
+    print('FULL')
+    exit()
+
+rows = [0] * (n // x)
+for s in sNo:
+    i = s // x if s % x else s // x - 1
+    rows[i] += 1
+
+print(*rows, sep='\n')
