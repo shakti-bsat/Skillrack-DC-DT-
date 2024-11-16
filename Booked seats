@@ -1,0 +1,10 @@
+n,x,y = map(int,input().split())
+seats = list(map(int,input().split()))
+booked = ['0'] * n
+c = []
+for i in seats:
+    booked[i-1] = 1
+for i in range(0,n,x):
+    c.append(booked[i:i+x].count(1))
+print('FULL' if booked.count(1) == n else '\n'.join(map(str,c)))
+"""
