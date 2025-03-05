@@ -1,0 +1,7 @@
+#DT
+num = int(input())
+lst = list(map(int,input().split()))
+n1 = int(input())
+for i in range(len(lst)//n1):
+    print(max(lst[:n1]),end = " ")
+    lst = lst[n1:]
